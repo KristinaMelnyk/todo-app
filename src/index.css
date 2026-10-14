@@ -1,0 +1,44 @@
+/* ---------- Design tokens (change these to restyle the whole app) ---------- */
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #18181b;
+  --muted: #8a8a93;
+  --line: #ececef;
+  --accent: #5b5bd6;
+  --accent-soft: #eeeefc;
+  --radius: 10px;
+}
+
+/* Automatic dark mode: same names, different values */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --surface: #18181b;
+    --text: #ededef;
+    --muted: #7c7c85;
+    --line: #26262b;
+    --accent: #8b8bf0;
+    --accent-soft: #23233a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
